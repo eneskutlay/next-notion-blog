@@ -1,26 +1,15 @@
 import styles from "../styles/Home.module.css";
-import { Client } from "@notionhq/client";
+import Link from "next/link";
 
-export default function Home({ results }) {
-  //console.log(results[0].properties.Page.title[0].plain_text);
-  console.log(results)
+
+export const databaseId = process.env.NOTION_DATABASE_ID;
+
+export default function Home() {
   return (
-    <div className={styles.container}>
-      <h1>Hello World</h1>
+    <div>
+      <Link href="/writing">
+        <a>Blog</a>
+      </Link>
     </div>
   );
-}
-
-export async function getStaticProps() {
-  const notion = new Client({ auth: process.env.NOTION_TOKEN });
-  const databaseId = process.env.NOTION_DATABASE_ID;
-  const response = await notion.databases.query({
-    database_id: databaseId,
-  });
-
-  return {
-    props: {
-      results: response.results,
-    },
-  };
 }
