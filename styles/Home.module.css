@@ -12,7 +12,7 @@
 
 .profileDetails {
   margin-bottom: 2rem;
-  margin-top: 10rem;
+  margin-top: 5rem;
   word-spacing: 0.2rem;
   line-height: 1.4;
 }
@@ -28,7 +28,7 @@
 }
 
 .projects h2 {
-  margin-top: 8rem;
+  margin-top: 2.5rem;
   margin-bottom: 2rem;
 }
 
@@ -37,6 +37,12 @@
   .someProjects {
     display: grid;
     grid-template-columns: auto auto;
+  }
+  .profileDetails {
+    margin-top: 8rem;
+  }
+  .projects {
+    margin-top: 8rem;
   }
   
 }
