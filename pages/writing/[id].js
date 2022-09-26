@@ -1,10 +1,10 @@
 import { Fragment } from "react";
 import Head from "next/head";
-import { getDatabase, getPage, getBlocks } from "../api/notion";
+import { getDatabase, getPage, getBlocks} from "../api/notion";
 import Link from "next/link";
-import { databaseId } from "../index.js";
 import styles from "../../styles/Post.module.css";
 import { Text } from "../../components/Text";
+import { databaseId } from ".";
 
 
 const renderNestedList = (block) => {
