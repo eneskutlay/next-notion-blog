@@ -4,7 +4,7 @@ import Image from "next/image";
 export default function Card(props) {
   return (
     <div className={styles.root}>
-      <a className={styles.item}>
+      <a href={props.url}className={styles.item}>
         <div className={styles.image}>
           <Image src={props.image} alt={props.title} width={64} height={64} />
         </div>

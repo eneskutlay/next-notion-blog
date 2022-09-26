@@ -22,7 +22,6 @@ export default function SocialLinks() {
           Resume
         </a>
       </div>
-      <hr></hr>
     </div>
   );
 }
