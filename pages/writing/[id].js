@@ -85,14 +85,7 @@ const renderBlock = (block) => {
       const caption = value.caption ? value.caption[0]?.plain_text : "";
       return (
         <figure>
-          <Image
-            className={styles.itsImage}
-            src={src}
-            alt={caption}
-            width={704}
-            height={400}
-            objectFit="cover"
-          />
+          <img src={src} alt={caption}/>
           {caption && <figcaption>{caption}</figcaption>}
         </figure>
       );
@@ -159,8 +152,8 @@ export default function Post({ page, blocks }) {
           {blocks.map((block) => (
             <Fragment key={block.id}>{renderBlock(block)}</Fragment>
           ))}
-          <Link href="/">
-            <a className={styles.back}>← Go home</a>
+          <Link href="/writing">
+            <a className={styles.back}>← Go back</a>
           </Link>
         </section>
       </article>
