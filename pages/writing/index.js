@@ -33,31 +33,6 @@ export default function Writing({ posts }) {
   );
 }
 
-/*
-
-    <div>
-      <h2 className={styles.heading}>All Posts</h2>
-      <ol className={styles.posts}>
-        {posts.map((post) => {
-          console.log(post)
-          return (
-            <li key={post.id} className={styles.post}>
-              <h3 className={styles.postTitle}>
-                <Link href={`/${post.id}`}>
-                  <a>
-                    <Text text={post.properties.Name.title} />
-                  </a>
-                </Link>
-              </h3>
-            </li>
-          );
-        })}
-      </ol>
-    </div>
-
-
-*/
-
 export const getStaticProps = async () => {
   const database = await getDatabase(databaseId);
 
