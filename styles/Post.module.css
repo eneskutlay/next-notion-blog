@@ -9,9 +9,14 @@
     font-size: 32px;
   }
   
-  .container img {
-    width: 100%;
-    height: auto;
+  .container .itsImage {
+    width: 100% !important;
+    height: auto !important;
+  }
+
+  .container .itsImage img {
+    width: 100% !important; 
+    height: auto !important;
   }
   
   .container figure {

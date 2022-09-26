@@ -1,11 +1,11 @@
 import { Fragment } from "react";
 import Head from "next/head";
-import { getDatabase, getPage, getBlocks} from "../api/notion";
+import { getDatabase, getPage, getBlocks } from "../api/notion";
 import Link from "next/link";
 import styles from "../../styles/Post.module.css";
 import { Text } from "../../components/Text";
 import { databaseId } from ".";
-
+import Image from "next/image";
 
 const renderNestedList = (block) => {
   const { type } = block;
@@ -85,7 +85,14 @@ const renderBlock = (block) => {
       const caption = value.caption ? value.caption[0]?.plain_text : "";
       return (
         <figure>
-          <img src={src} alt={caption} />
+          <Image
+            className={styles.itsImage}
+            src={src}
+            alt={caption}
+            width={704}
+            height={400}
+            objectFit="cover"
+          />
           {caption && <figcaption>{caption}</figcaption>}
         </figure>
       );
@@ -134,7 +141,6 @@ const renderBlock = (block) => {
 };
 
 export default function Post({ page, blocks }) {
-  console.log(blocks)
   if (!page || !blocks) {
     return <div />;
   }
