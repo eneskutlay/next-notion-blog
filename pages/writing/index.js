@@ -1,17 +1,23 @@
-import styles from "../../styles/Home.module.css";
 import { getDatabase } from "../api/notion";
 import Link from "next/link";
 import { Text } from "../../components/Text";
+import styles from "../../styles/Writing.module.css";
 
 export const databaseId = process.env.NOTION_DATABASE_ID;
 
 export default function Writing({ posts }) {
   return (
-    <div className={styles.posts}>
+    <div className={styles.root}>
       <ol className={styles.posts}>
         {posts.map((post) => {
+          const date = new Date(post.last_edited_time).toLocaleString("en-US", {
+            month: "short",
+            day: "2-digit",
+            year: "numeric",
+          });
           return (
             <li key={post.id} className={styles.post}>
+              <span className={styles.postDate}>{date}</span>
               <h3 className={styles.postTitle}>
                 <Link href={`writing/${post.id}`}>
                   <a>
