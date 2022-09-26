@@ -6,7 +6,7 @@ export default function Card(props) {
     <div className={styles.root}>
       <a className={styles.item}>
         <div className={styles.image}>
-          <Image src={"/github.png"} alt={props.title} width={64} height={64} />
+          <Image src={props.image} alt={props.title} width={64} height={64} />
         </div>
         <div className={styles.details}>
           <h3 className={styles.detailsTitle}>{props.title}</h3>

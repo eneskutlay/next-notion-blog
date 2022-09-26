@@ -19,13 +19,14 @@ export default function Home() {
         <h2>Some Projects</h2>
         <div className={styles.someProjects}>
           {projects.map((project) => {
-            const { title, url, lang } = project;
+            const { title, url, lang, image } = project;
             return (
               <Card
                 key={`project_${url}`}
                 title={title}
                 url={url}
                 lang={lang}
+                image={image}
               />
             );
           })}
