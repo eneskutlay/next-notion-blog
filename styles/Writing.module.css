@@ -23,7 +23,7 @@
 }
 
 
-@media only screen and (min-width: 780px) {
+@media only screen and (min-width: 650px) {
   .root {
     font-size: 1.2rem;
   }
