@@ -1,12 +1,26 @@
-.container {
-  padding: 0 20px;
-  max-width: 700px;
-  margin: 0 auto;
-  line-height: 1.5;
+.root {
+  margin: 0;
+  min-width: 0;
+  max-width: 46rem;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  color: rgba(255, 255, 255, 0.955);
+  font-size: 1.2rem;
+  justify-content: center;
 }
 
 .container h1 {
-  font-size: 32px;
+  color: #fff;
+}
+
+.container li {
+  margin-left: 1.5rem;
+}
+
+.container a {
+  color: #fff;
+  text-decoration: underline #0a600a;
 }
 
 .container img {
@@ -21,10 +35,31 @@
 
 .container figcaption {
   opacity: 0.6;
+  text-align: center;
+  font-size: 1rem;
 }
 
-.name {
-  font-size: 36px;
+/*# Mapping Style */
+
+.bold {
+  font-weight: bold;
+}
+
+.italic {
+  font-style: italic;
+}
+
+.underline {
+  text-decoration: underline;
+}
+
+.strikethrough {
+  text-decoration: line-through;
+}
+
+.bookmark {
+  display: block;
+  margin-bottom: 10px;
 }
 
 .back {
@@ -32,13 +67,9 @@
   margin-bottom: 20px;
 }
 
-.bold {
-  font-weight: bold;
-}
-
 .code {
   font-family: monospace;
-  background-color: rgb(242, 242, 242);
+  background-color: rgb(15, 8, 28);
   padding: 2px 4px;
   border-radius: 2px;
 }
@@ -48,7 +79,7 @@
 }
 
 .pre {
-  background-color: rgb(242, 242, 242);
+  background-color: rgb(15, 8, 28);
   padding: 2px 4px;
   margin: 20px 0;
   line-height: 2.3;
@@ -61,50 +92,4 @@
   font-family: monospace;
   display: flex;
   flex-wrap: wrap;
-}
-
-.file {
-  padding: 2px 4px;
-  text-decoration: none;
-}
-
-.file a {
-  color: inherit;
-}
-
-.file:hover {
-  background: rgba(55, 53, 47, 0.08);
-  cursor: pointer;
-  border-radius: 2px;
-}
-
-.italic {
-  font-style: italic;
-}
-
-.strikethrough {
-  text-decoration: line-through;
-}
-
-.underline {
-  text-decoration: underline;
-}
-
-.bookmark {
-  display: block;
-  margin-bottom: 10px;
-}
-
-@media (prefers-color-scheme: dark) {
-  .code {
-    background-color: rgb(15, 8, 28);
-  }
-  .file:hover {
-    background: rgba(255, 255, 255, 0.1);
-    cursor: pointer;
-    border-radius: 2px;
-  }
-  .pre {
-    background-color: rgb(15, 8, 28);
-  }
 }
