@@ -21,3 +21,10 @@
   opacity: 1;
   margin-top: 2.5px;
 }
+
+
+@media only screen and (min-width: 780px) {
+  .root {
+    font-size: 1.2rem;
+  }
+}

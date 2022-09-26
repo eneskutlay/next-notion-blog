@@ -1,19 +1,31 @@
 .navbar {
   margin-top: 34px;
-  margin-bottom: 34px;
+  margin-bottom: 32px;
   display: flex;
   justify-content: space-between;
   color: #fbfbfb;
 }
 
-.writing {
+.about {
   margin: 1.1rem;
 }
 
-.about {
+.writing {
   margin: 1.1rem 0;
 }
 
 .activeLinks {
-  border-bottom: 2px solid #4bb7ff;
+  border-bottom: 1px solid #4bb7ff;
+}
+
+@media only screen and (min-width: 780px) {
+  .navbar {
+    margin-top: 64px;
+    margin-bottom: 64px;
+    font-size: 1.5rem;
+    line-height: 1.4rem;
+  }
+  .about {
+    margin: 0 1rem;
+  }
 }

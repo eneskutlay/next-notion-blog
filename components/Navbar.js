@@ -8,11 +8,11 @@ export default function Navbar() {
         <a className={styles.home}>Home</a>
       </Link>
       <div className={styles.links}>
-        <Link activeClassName={styles.activeLinks} href="/writing">
-          <a className={styles.writing}>Writing</a>
-        </Link>
         <Link activeClassName={styles.activeLinks} href="/about">
           <a className={styles.about}>About</a>
+        </Link>
+        <Link activeClassName={styles.activeLinks} href="/writing">
+          <a className={styles.writing}>Writing</a>
         </Link>
       </div>
     </div>
