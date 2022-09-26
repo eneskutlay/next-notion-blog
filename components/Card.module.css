@@ -1,0 +1,25 @@
+.item {
+  display: flex;
+  padding: 1rem 0;
+}
+
+.details h3 {
+  margin: 0.5rem 1rem;
+}
+
+.details p {
+  margin: 0.2rem 1rem;
+}
+
+@media only screen and (min-width: 650px) {
+  .item {
+    padding: 1.5rem 0 2.5rem 0;
+  }
+  .details h3 {
+    margin: 0 20px;
+  }
+
+  .details p {
+    margin: 2px 20px;
+  }
+}
