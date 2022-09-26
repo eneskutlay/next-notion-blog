@@ -1,0 +1,19 @@
+.navbar {
+    margin-top: 34px;
+    margin-bottom: 34px;
+    display: flex;
+    justify-content: space-between;
+    color: #fbfbfb;
+}
+
+.writing {
+    margin: 1.1rem; 
+}
+
+.about {
+    margin: 1.1rem;
+}
+
+.activeLinks {
+    border-bottom: 2px solid #4bb7ff;
+}
