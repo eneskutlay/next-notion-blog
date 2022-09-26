@@ -1,5 +1,5 @@
 import styles from "./SocialLinks.module.css";
-import { profiles } from "../lib/data";
+import { profiles } from "../../lib/data";
 
 export default function SocialLinks() {
   return (

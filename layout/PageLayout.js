@@ -1,4 +1,4 @@
-import Navbar from "../components/Navbar";
+import Navbar from "../components/Navbar/Navbar";
 import styles from "./PageLayout.module.css";
 
 export default function PageLayout({ children }) {

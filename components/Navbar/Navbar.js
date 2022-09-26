@@ -1,4 +1,4 @@
-import Link from "./ActiveLink";
+import Link from "../ActiveLink";
 import styles from "./Navbar.module.css";
 
 export default function Navbar() {
