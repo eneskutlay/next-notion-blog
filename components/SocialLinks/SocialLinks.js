@@ -7,13 +7,15 @@ export default function SocialLinks() {
       <div className={styles.socialLinks}>
         <a
           target="_blank"
+          rel="noreferrer"
           href={profiles.github.url}
         >{`${profiles.github.title}`}</a>
         <a
           target="_blank"
+          rel="noreferrer"
           href={profiles.twitter.url}
         >{`${profiles.twitter.title}`}</a>
-        <a target="_blank" href={profiles.linkedin.url}>
+        <a target="_blank" rel="noreferrer" href={profiles.linkedin.url}>
           {`${profiles.linkedin.title}`}
         </a>
         <a href="/" download>

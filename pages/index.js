@@ -9,7 +9,7 @@ export default function Home() {
       <div className={styles.profileDetails}>
         <h1> {`Hello, my name is ${personal.name}`}</h1>
         <p>
-          I'm a {`${personal.title}`}. Right now I'm student on the{" "}
+          I'm a {`${personal.title}`}. Right now I'm student on the
           {`${personal.school}`} Previously I was two months of front-end
           internship at {`${personal.company}`} In my free time I try to develop
           open source projects and learn new things.
