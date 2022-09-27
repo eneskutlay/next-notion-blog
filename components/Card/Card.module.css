@@ -21,11 +21,11 @@
     padding: 0.5rem;
   }
   .details h3 {
-    margin: 0 20px;
+    margin: 5px 20px;
   }
 
   .details p {
-    margin: 2px 20px;
+    margin: 4px 20px;
     opacity: 0.8;
   }
   .item:hover {

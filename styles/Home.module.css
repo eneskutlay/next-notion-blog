@@ -22,6 +22,10 @@
   font-size: 1.5rem;
 }
 
+.profileDetails a {
+  text-decoration: underline;
+}
+
 .profileDetails p {
   margin: 0.5rem 0;
   font-size: 1.4rem;

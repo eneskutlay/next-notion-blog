@@ -6,7 +6,7 @@ export default function Card(props) {
     <div className={styles.root}>
       <a
         target="_blank"
-        rel="noreferrer"
+        rel="noopener noreferrer"
         href={props.url}
         className={styles.item}
       >
