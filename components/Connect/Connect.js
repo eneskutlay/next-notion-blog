@@ -9,13 +9,8 @@ export default function Connect() {
         {profiles.map((profile) => {
           const { title, url } = profile;
           return (
-            <div className={styles.socialItem}>
-              <a
-                key={`profile_${url}`}
-                href={url}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
+            <div className={styles.socialItem} key={profile.title}>
+              <a href={url} target="_blank" rel="noopener noreferrer">
                 {title}
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
                   <path
