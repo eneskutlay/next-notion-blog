@@ -1,0 +1,51 @@
+.root {
+  width: 100%;
+  margin: auto;
+  text-decoration: none;
+}
+
+.root h2 {
+  margin: 2rem 0;
+}
+
+.socialLinks {
+  font-size: 1.2rem;
+  font-weight: bold;
+  display: row;
+}
+
+.socialItem {
+  display: flex;
+  margin: 1.2rem 0;
+  opacity: 0.8;
+}
+
+.socialLinks svg {
+  width: 16px;
+  margin-left:8px;
+  fill: white;
+}
+
+@media only screen and (min-width: 650px) {
+  .root {
+    margin-top: 7rem;
+  }
+  .root h2 {
+    margin: 2.5rem 0 1rem 0;
+  }
+
+  .socialLinks {
+    font-size: 1.1rem;
+    font-weight: bold;
+    display: flex;
+  }
+  .socialItem {
+    display: flex;
+    margin: 1rem 2rem 0 0;
+  }
+
+  .socialLinks svg {
+    width: 16px;
+    margin-left: 10px;
+  }
+}

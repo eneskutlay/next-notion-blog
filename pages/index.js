@@ -1,6 +1,6 @@
 import styles from "../styles/Home.module.css";
 import { personal, projects } from "../lib/data.js";
-// import SocialLinks from "../components/SocialLinks/SocialLinks";
+import Connect from "../components/Connect/Connect.js";
 import Card from "../components/Card/Card.js";
 
 export default function Home() {
@@ -32,6 +32,7 @@ export default function Home() {
           })}
         </div>
       </div>
+      <Connect />
     </div>
   );
 }

@@ -4,7 +4,12 @@ import Image from "next/image";
 export default function Card(props) {
   return (
     <div className={styles.root}>
-      <a href={props.url}className={styles.item}>
+      <a
+        target="_blank"
+        rel="noreferrer"
+        href={props.url}
+        className={styles.item}
+      >
         <div className={styles.image}>
           <Image src={props.image} alt={props.title} width={64} height={64} />
         </div>
