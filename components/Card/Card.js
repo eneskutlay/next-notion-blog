@@ -11,7 +11,7 @@ export default function Card(props) {
         className={styles.item}
       >
         <div className={styles.image}>
-          <Image src={props.image} alt={props.title} width={64} height={64} />
+          <Image src="/github.svg" alt={props.title} width={64} height={64} />
         </div>
         <div className={styles.details}>
           <h3 className={styles.detailsTitle}>{props.title}</h3>
