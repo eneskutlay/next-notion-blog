@@ -85,7 +85,7 @@ const renderBlock = (block) => {
       const caption = value.caption ? value.caption[0]?.plain_text : "";
       return (
         <figure>
-          <img src={src} alt={caption}/>
+          <img src={src} alt={caption} />
           {caption && <figcaption>{caption}</figcaption>}
         </figure>
       );
@@ -141,7 +141,22 @@ export default function Post({ page, blocks }) {
     <div className={styles.root}>
       <Head>
         <title>{page.properties.Name.title[0].plain_text}</title>
-        <link rel="icon" href="/favicon.ico" />
+        <meta
+          name="description"
+          content={page.properties.Name.title[0].plain_text}
+        />
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+        <meta
+          property="og:title"
+          content={page.properties.Name.title[0].plain_text}
+          key="title"
+        />
+        <meta
+          property="og:image"
+          content={`https://og-image.vercel.app//${encodeURIComponent(
+            page.properties.Name.title[0].plain_text
+          )}.?theme=dark&md=0&fontSize=100px&images=https%3A%2F%2Fassets.vercel.com%2Fimage%2Fupload%2Ffront%2Fassets%2Fdesign%2Fhyper-color-logo.svg`}
+        />
       </Head>
 
       <article className={styles.container}>
