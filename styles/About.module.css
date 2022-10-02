@@ -1,0 +1,21 @@
+.container {
+  box-sizing: border-box;
+  margin: 8rem auto 0 auto;
+  min-width: 0;
+  max-width: 46rem;
+  width: 100%;
+  color: #fff;
+}
+
+.aboutMeSections {
+  margin-bottom: 1.2rem;
+}
+
+.aboutMeSections a {
+  text-decoration: underline;
+}
+
+.aboutMeSections p {
+  line-height: 1.75;
+  font-size: 1.4rem;
+}
