@@ -22,3 +22,6 @@
 # debug
 npm-debug.log*
 ".gitignore" 32L, 343B
+
+# env
+.env
