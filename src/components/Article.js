@@ -11,7 +11,9 @@ function Article(props) {
         </h3>
         <small className=" text-s text-text">{props.date}</small>
       </header>
-      <p className="mb-7 mt-2 text-lg text-text">{props.summary}</p>
+      <p className="mb-7 mt-2 font-montserrat text-lg text-text">
+        {props.summary}
+      </p>
     </article>
   );
 }
