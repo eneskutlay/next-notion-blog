@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: Montserrat;
+  src: url("../static/fonts/Montserrat-Black.ttf");
+}
+
 @layer base {
   body {
     @apply bg-primary;

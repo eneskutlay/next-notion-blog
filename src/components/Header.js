@@ -1,7 +1,7 @@
 function Header() {
   return (
     <header className="mb-10 flex items-center justify-between">
-      <h1 className="py-0 text-4xl font-black text-title">
+      <h1 className="py-0 font-montserrat text-4xl font-black text-title">
         John Doe's Blog
       </h1>
       <div className="">

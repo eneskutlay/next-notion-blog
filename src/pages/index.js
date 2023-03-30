@@ -13,23 +13,24 @@ export default function Home({ posts }) {
       <aside className="block">
         <Bio />
       </aside>
-      {posts.map((post) => {
-        const date = new Date(post.last_edited_time).toLocaleString("en-US", {
-          month: "short",
-          day: "2-digit",
-          year: "numeric",
-        });
-        return (
-          <main key={post.id} className="block">
+      <main className="block">
+        {posts.map((post) => {
+          const date = new Date(post.last_edited_time).toLocaleString("en-US", {
+            month: "short",
+            day: "2-digit",
+            year: "numeric",
+          });
+          return (
             <Article
+              key={post.id}
               title={post.properties.Name.title[0].plain_text}
               date={date}
               summary={post.properties.Summary.rich_text[0].plain_text}
               href="/" //`writing/${post.id}`
             />
-          </main>
-        );
-      })}
+          );
+        })}
+      </main>
     </div>
   );
 }

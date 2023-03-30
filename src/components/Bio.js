@@ -5,7 +5,7 @@ function Bio() {
         src="https://creatorspace.imgix.net/users/cle5faepi0030tg0y9m3yy5gj/dLmo1jDtgUO6jebN-Memoji.png?w=300&h=300"
         className="mr-3 h-14 w-14 rounded-full"
       />
-      <p className="max-w-xs pt-2 text-text">
+      <p className=" max-w-xs p-2 text-base text-text">
         Personal blog by{" "}
         <a
           href="https://mobile.twitter.com/enesevski"
