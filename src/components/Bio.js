@@ -1,5 +1,3 @@
-import React from "react";
-
 function Bio() {
   return (
     <div className="mb-14 flex">
