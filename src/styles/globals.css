@@ -5,6 +5,13 @@
 @font-face {
   font-family: Montserrat;
   src: url("../static/fonts/Montserrat-VariableFont_wght.ttf");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Merriweather;
+  src: url("../static/fonts/Merriweather-Regular.ttf");
+  font-display: swap;
 }
 
 @layer base {
@@ -12,4 +19,51 @@
     @apply bg-primary;
     @apply antialiased;
   }
+}
+
+/* Paragraf etiketi */
+.container {
+  @apply text-text;
+}
+.container p {
+  @apply mb-4 leading-relaxed;
+}
+
+/* Alıntı etiketi */
+.container blockquote {
+  @apply ml-0 border-l-2 border-secondary pl-4 italic opacity-50;
+}
+
+/* Başlık etiketi */
+.container h1 {
+  @apply mb-8 text-3xl font-bold text-title;
+}
+
+.container h2 {
+  @apply mb-4 text-xl font-bold tracking-wide text-secondary opacity-80;
+}
+
+/* Liste öğeleri */
+.container li {
+  @apply mb-2 ml-6 list-disc  opacity-90;
+}
+
+/* Bağlantılar */
+.container a {
+  @apply text-secondary underline transition duration-200 ease-in-out hover:text-red-400;
+}
+
+/* Resimler */
+.container img {
+  @apply mb-4 h-auto w-full;
+}
+
+/* Figure */
+.container figure {
+  @apply m-0 mb-6;
+}
+
+/* Figcaption */
+.container figcaption {
+  @apply mb-0 mt-0 text-center text-sm  opacity-80;
 }
