@@ -1,9 +1,13 @@
+import Image from "next/image";
+
 function Bio() {
   return (
     <div className="mb-14 flex">
-      <img
-        src="https://creatorspace.imgix.net/users/cle5faepi0030tg0y9m3yy5gj/dLmo1jDtgUO6jebN-Memoji.png?w=300&h=300"
+      <Image
+        src="/nice-avatar.png"
         className="mr-3 h-14 w-14 rounded-full"
+        width={56}
+        height={56}
       />
       <p className=" max-w-xs p-2 text-base text-text">
         Personal blog by{" "}

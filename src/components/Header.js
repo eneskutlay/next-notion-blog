@@ -1,4 +1,5 @@
 function Header() {
+  // Turn layout into a component
   return (
     <header className="mb-10 flex items-center justify-between">
       <h1 className="py-0 font-montserrat text-4xl font-black text-title">

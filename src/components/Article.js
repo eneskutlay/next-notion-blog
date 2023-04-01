@@ -17,6 +17,5 @@ function Article(props) {
     </article>
   );
 }
-//href={`writing/${post.id}`}
 
 export default Article;

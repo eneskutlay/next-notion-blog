@@ -1,5 +1,4 @@
 import { getDatabase } from "./api/notion";
-import Head from "next/head";
 import Header from "../components/Header";
 import Bio from "../components/Bio";
 import Article from "../components/Article";
@@ -26,7 +25,7 @@ export default function Home({ posts }) {
               title={post.properties.Name.title[0].plain_text}
               date={date}
               summary={post.properties.Summary.rich_text[0].plain_text}
-              href="/" //`writing/${post.id}`
+              href={`/${post.id}`}
             />
           );
         })}
