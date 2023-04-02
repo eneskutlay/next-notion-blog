@@ -1,20 +1,22 @@
 import { Fragment } from "react";
+import { databaseId } from ".";
 import { getDatabase, getPage, getBlocks } from "./api/notion";
 import Link from "next/link";
 import { Text } from "../components/Text";
-import { databaseId } from ".";
 
 const renderNestedList = (block) => {
+  // Numbered lists not working\
   const { type } = block;
   const value = block[type];
   if (!value) return null;
 
   const isNumberedList = value.children[0].type === "numbered_list_item";
 
-  if (isNumberedList) {
-    return <ol>{value.children.map((block) => renderBlock(block))}</ol>;
-  }
-  return <ul>{value.children.map((block) => renderBlock(block))}</ul>;
+  return isNumberedList ? (
+    <ol>{value.children.map((block) => renderBlock(block))}</ol>
+  ) : (
+    <ul>{value.children.map((block) => renderBlock(block))}</ul>
+  );
 };
 
 const renderBlock = (block) => {
@@ -51,7 +53,7 @@ const renderBlock = (block) => {
       return (
         <li>
           <Text text={value.rich_text} />
-          {!!value.children && renderNestedList(block)}
+          {value.children && renderNestedList(block)}
         </li>
       );
     case "to_do":
@@ -92,8 +94,8 @@ const renderBlock = (block) => {
       return <blockquote key={id}>{value.rich_text[0].plain_text}</blockquote>;
     case "code":
       return (
-        //overflow-x-scroll
-        <pre className="m-2 whitespace-pre-wrap rounded-md bg-cyan-900 p-4 text-white">
+        // overflow-x-scroll
+        <pre className="m-3 whitespace-pre-wrap rounded-md bg-cyan-900 p-4 text-white">
           <code className="flex flex-wrap p-5" key={id}>
             {value.rich_text[0].plain_text}
           </code>
@@ -149,9 +151,7 @@ export default function Post({ page, blocks }) {
         </h1>
         <section className="font-merriweather text-base font-normal">
           {blocks.map((block) => (
-            <Fragment className=" font-merriweather" key={block.id}>
-              {renderBlock(block)}
-            </Fragment>
+            <Fragment key={block.id}>{renderBlock(block)}</Fragment>
           ))}
         </section>
         <Link href="/">← Back to home</Link>

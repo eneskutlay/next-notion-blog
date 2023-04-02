@@ -1,3 +1,5 @@
+import React from "react";
+
 export const Text = ({ text }) => {
   if (!text) {
     return null;
@@ -16,21 +18,23 @@ export const Text = ({ text }) => {
       text.content
     );
     if (bold) {
-      el = <strong>{el}</strong>;
+      el = <strong key={`bold-${value.plain_text}`}>{el}</strong>;
     }
     if (italic) {
-      el = <em>{el}</em>;
+      el = <em key={`italic-${value.plain_text}`}>{el}</em>;
     }
     if (underline) {
-      el = <u>{el}</u>;
+      el = <u key={`underline-${value.plain_text}`}>{el}</u>;
     }
     if (strikethrough) {
-      el = <del>{el}</del>;
+      el = <del key={`strikethrough-${value.plain_text}`}>{el}</del>;
     }
     if (code) {
-      el = <code>{el}</code>;
+      el = <code key={`code-${value.plain_text}`}>{el}</code>;
     }
-    acc.push(el);
+    acc.push(
+      <React.Fragment key={`fragment-${value.plain_text}`}>{el}</React.Fragment>
+    );
     return acc;
   }, []);
 
