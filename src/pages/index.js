@@ -25,7 +25,7 @@ export default function Home({ posts }) {
             key={post.id}
             title={post.properties.Name.title[0].plain_text}
             date={date}
-            summary={post.properties.Summary.rich_text[0].plain_text}
+            summary={post.properties.Summary?.rich_text[0]?.plain_text ?? ""}
             href={`/${post.id}`}
           />
         );
