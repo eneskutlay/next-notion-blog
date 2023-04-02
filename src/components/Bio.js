@@ -11,7 +11,7 @@ function Bio() {
         height={56}
         alt={`${siteMetaData.authorName}`}
       />
-      <p className=" max-w-xs p-2 text-base text-text">
+      <p className=" max-w-xs p-0.5 text-base text-text sm:p-2">
         Personal blog by{" "}
         <a
           href={`https://twitter.com/${siteMetaData.twitterUserName}`}

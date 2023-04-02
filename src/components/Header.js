@@ -6,7 +6,7 @@ function Header() {
   return (
     <header className="mb-10 flex items-center justify-between">
       <Link href="/">
-        <h1 className="py-0 font-montserrat text-4xl font-black text-title">
+        <h1 className="py-0 font-montserrat text-3xl font-black text-title sm:text-4xl">
           {siteMetaData.siteName}
         </h1>
       </Link>

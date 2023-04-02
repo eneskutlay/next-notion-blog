@@ -4,7 +4,7 @@ function Article(props) {
   return (
     <article className="block" key={props.id}>
       <header className="">
-        <h3 className="mb-2 mt-14 font-montserrat text-3xl font-black">
+        <h3 className="mb-2 mt-14 font-montserrat text-2xl font-black sm:text-3xl">
           <Link className="text-secondary" href={props.href}>
             {props.title}
           </Link>
