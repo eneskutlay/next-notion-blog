@@ -1,38 +1,86 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## Getting Started
+# Next Notion Blog
 
-First, run the development server:
+A minimalist-focused blog website built on the capabilities of NextJS, Notion API and Tailwind providing quick setup and easy configuration.
 
+[Demo Website](https://nextjs-notionapi-blog.vercel.app)
+
+## ✨ Features
+
+- Notion integration
+- Minimalist style
+- Accessibility, Performance and SEO [^1]
+- Easy Configuration
+- Supports all text-types.
+- RSS Feed for blog posts
+
+
+## 🚀 Getting Started
+
+**Clone project and install dependencies**
+
+Use `git` to clone the site:
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
+git clone https://github.com/eneskutlay/next-notion-blog.git
+cd next-notion-blog
+```
+and run `npm install`.
+
+
+## 🛠️ Notion Integration 
+
+**Create an integration**
+
+-   Go to [https://www.notion.com/my-integrations](https://www.notion.com/my-integrations).
+-   Click the "+ New integration" button.
+-   Give your integration a name - I chose "Vacation Planner".
+-   Select the workspace where you want to install this integration.
+-   Select the capabilities that your integration will have.
+-   Click "Submit" to create the integration.
+-   Copy the "Internal Integration Token" on the next page and save it somewhere secure, e.g. a password manager.
+
+![gif](https://files.readme.io/2ec137d-093ad49-create-integration.gif)
+
+**Create an Full Page Database**
+
+- Start from a new or existing page in your workspace.
+- Insert a new database by typing `/database` and selecting `Database - Full page`
+- Give it a title. I called mine "Destinations". Click the `•••` menu at the top right of the page, scroll to `Add connections`, and use the search bar to find the integration that you created. Click on your integration to give it access to your database.
+- Before moving on, you need the ID of the database you just created.  
+Copy the URL of your Notion database. Make sure you're viewing the database as a full page
+	- If you're using the Notion desktop app, click on the `Share` button and select `Copy link`.
+
+`https://www.notion.so/myworkspace/1ffe4fd3f5594744b0b9602d9afc4e70?v=...`
+
+> Your link will look like the example above. The 32-character part before the **?** is your databaseID.
+
+- Create a file named .env.local in the main directory of the project and add your Notion integration token to the first value and your database ID you just copied to the second value..
+```env
+NOTION_TOKEN=
+NOTION_DATABASE_ID=
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+![gif](https://files.readme.io/3e5cb5b-share-database-with-integration.gif)
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+## Change personal information
+Visit `src/utils/config.js` file to edit your personal information.
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+## 🏃 Run
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+Start the site by running `npm run dev`.
+Your site is now running at `http://localhost:3000`!
 
-## Learn More
 
-To learn more about Next.js, take a look at the following resources:
+## 🤔 Questions or problems?
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Easy, create an issue
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
-## Deploy on Vercel
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+[^1]: Based on the Chrome Lighthouse report.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+
+
+
