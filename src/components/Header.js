@@ -12,11 +12,11 @@ function Header() {
       <div className="">
         <a
           className="cursor-pointer px-4 text-secondary underline underline-offset-4"
-          href="https://mobile.twitter.com/enesevski"
+          href="/rss"
           target="_blank"
           rel="noopener noreferrer"
         >
-          Twitter
+          RSS
         </a>
         <a
           className="cursor-pointer text-secondary underline underline-offset-4"

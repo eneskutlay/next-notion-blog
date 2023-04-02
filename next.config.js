@@ -5,6 +5,14 @@ const nextConfig = {
     locales: ["en"],
     defaultLocale: "en",
   },
+  async rewrites() {
+    return [
+      {
+        source: "/rss",
+        destination: "/api/rss",
+      },
+    ];
+  },
 };
 
 module.exports = nextConfig;
