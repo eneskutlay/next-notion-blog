@@ -21,6 +21,7 @@
 
 # debug
 npm-debug.log*
+<<<<<<< HEAD
 yarn-debug.log*
 yarn-error.log*
 .pnpm-debug.log*
@@ -35,3 +36,9 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+=======
+".gitignore" 32L, 343B
+
+# env
+.env
+>>>>>>> new-version

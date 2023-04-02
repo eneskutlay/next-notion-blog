@@ -1,0 +1,66 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: Montserrat;
+  src: url("../static/fonts/Montserrat-VariableFont_wght.ttf");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Merriweather;
+  src: url("../static/fonts/Merriweather-Regular.ttf");
+  font-display: swap;
+}
+
+body {
+  @apply bg-primary antialiased;
+}
+
+.container {
+  @apply text-text;
+}
+
+.container p {
+  @apply mb-3 leading-relaxed;
+}
+
+.container blockquote {
+  @apply ml-0 border-l-2 border-secondary pl-4 italic opacity-50;
+}
+
+.container h1 {
+  @apply my-6 text-3xl font-bold text-title;
+}
+
+.container h2 {
+  @apply my-3 text-2xl font-bold tracking-wide text-cyan-400 opacity-80;
+}
+
+.container h3,
+h4,
+h5,
+h6 {
+  @apply my-3 text-xl font-bold tracking-wide text-cyan-400 opacity-80;
+}
+
+.container li {
+  @apply mb-2 ml-6 opacity-90;
+}
+
+.container a {
+  @apply text-secondary underline transition duration-200 ease-in-out hover:text-red-400;
+}
+
+.container img {
+  @apply mb-4 h-auto w-full;
+}
+
+.container figure {
+  @apply m-0 mb-6;
+}
+
+.container figcaption {
+  @apply mb-0 mt-0 text-center text-sm opacity-80;
+}
