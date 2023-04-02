@@ -127,6 +127,7 @@ const renderBlock = (block) => {
         <a
           href={href}
           target="_brank"
+          rel="noopener noreferrer"
           className="text-blue-600 hover:underline"
         >
           {href}

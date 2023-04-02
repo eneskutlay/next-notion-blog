@@ -1,5 +1,6 @@
 import { Client } from "@notionhq/client";
 import RSS from "rss";
+import { rssData } from "../../utils/config";
 
 const notion = new Client({ auth: process.env.NOTION_TOKEN });
 
@@ -10,12 +11,14 @@ export default async (req, res) => {
   });
 
   const feed = new RSS({
-    title: "Blog Adı",
-    description: "Blog açıklaması",
-    feed_url: "http://localhost:3000/rss",
-    site_url: "http://localhost:3000",
-    language: "tr",
+    title: rssData.rssTitle,
+    description: rssData.rssDescription,
+    feed_url: rssData.rssFeedUrl,
+    site_url: rssData.rssSiteUrl,
+    language: rssData.rssLanguage,
     pubDate: new Date(),
+    author: rssData.rssAuthorName,
+    categories: rssData.rssCategories,
   });
 
   response.results.forEach((page) => {

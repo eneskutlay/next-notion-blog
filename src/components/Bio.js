@@ -1,3 +1,4 @@
+import { siteMetaData } from "@/utils/config";
 import Image from "next/image";
 
 function Bio() {
@@ -8,17 +9,17 @@ function Bio() {
         className="mr-3 h-14 w-14 rounded-full"
         width={56}
         height={56}
-        alt="John Doe"
+        alt={`${siteMetaData.authorName}`}
       />
       <p className=" max-w-xs p-2 text-base text-text">
         Personal blog by{" "}
         <a
-          href="https://mobile.twitter.com/enesevski"
+          href={`https://twitter.com/${siteMetaData.twitterUserName}`}
           target="_blank"
           rel="noopener noreferrer"
           className="cursor-pointer text-secondary underline underline-offset-4"
         >
-          John Doe
+          {`${siteMetaData.authorName}`}
         </a>
         . I explain tech stuff and share my thoughts.
       </p>
