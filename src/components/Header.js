@@ -1,10 +1,14 @@
+import Link from "next/link";
+
 function Header() {
   // Turn layout into a component
   return (
     <header className="mb-10 flex items-center justify-between">
-      <h1 className="py-0 font-montserrat text-4xl font-black text-title">
-        John Doe's Blog
-      </h1>
+      <Link href="/">
+        <h1 className="py-0 font-montserrat text-4xl font-black text-title">
+          John Doe's Blog
+        </h1>
+      </Link>
       <div className="">
         <a
           className="cursor-pointer px-4 text-secondary underline underline-offset-4"
