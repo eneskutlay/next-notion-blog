@@ -82,7 +82,7 @@ const renderBlock = (block) => {
       const caption = value.caption ? value.caption[0]?.plain_text : "";
       return (
         <figure>
-          <img src={src} alt={caption} />
+          <img loading="lazy" src={src} alt={caption} />
           {caption && <figcaption>{caption}</figcaption>}
         </figure>
       );
@@ -154,6 +154,7 @@ export default function Post({ page, blocks }) {
             </Fragment>
           ))}
         </section>
+        <Link href="/">← Back to home</Link>
       </article>
     </div>
   );
