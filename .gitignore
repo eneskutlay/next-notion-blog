@@ -21,24 +21,7 @@
 
 # debug
 npm-debug.log*
-<<<<<<< HEAD
-yarn-debug.log*
-yarn-error.log*
-.pnpm-debug.log*
-
-# local env files
-.env*.local
-.env
-
-# vercel
-.vercel
-
-# typescript
-*.tsbuildinfo
-next-env.d.ts
-=======
 ".gitignore" 32L, 343B
 
 # env
 .env
->>>>>>> new-version
