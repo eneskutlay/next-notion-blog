@@ -14,56 +14,53 @@
   font-display: swap;
 }
 
-@layer base {
-  body {
-    @apply bg-primary;
-    @apply antialiased;
-  }
+body {
+  @apply bg-primary antialiased;
 }
 
-/* Paragraf etiketi */
 .container {
   @apply text-text;
 }
+
 .container p {
-  @apply mb-4 leading-relaxed;
+  @apply mb-3 leading-relaxed;
 }
 
-/* Alıntı etiketi */
 .container blockquote {
   @apply ml-0 border-l-2 border-secondary pl-4 italic opacity-50;
 }
 
-/* Başlık etiketi */
 .container h1 {
-  @apply mb-8 text-3xl font-bold text-title;
+  @apply my-6 text-3xl font-bold text-title;
 }
 
 .container h2 {
-  @apply mb-4 text-xl font-bold tracking-wide text-secondary opacity-80;
+  @apply my-3 text-2xl font-bold tracking-wide text-cyan-400 opacity-80;
 }
 
-/* Liste öğeleri */
+.container h3,
+h4,
+h5,
+h6 {
+  @apply my-3 text-xl font-bold tracking-wide text-cyan-400 opacity-80;
+}
+
 .container li {
-  @apply mb-2 ml-6 list-disc  opacity-90;
+  @apply mb-2 ml-6 opacity-90;
 }
 
-/* Bağlantılar */
 .container a {
   @apply text-secondary underline transition duration-200 ease-in-out hover:text-red-400;
 }
 
-/* Resimler */
 .container img {
   @apply mb-4 h-auto w-full;
 }
 
-/* Figure */
 .container figure {
   @apply m-0 mb-6;
 }
 
-/* Figcaption */
 .container figcaption {
-  @apply mb-0 mt-0 text-center text-sm  opacity-80;
+  @apply mb-0 mt-0 text-center text-sm opacity-80;
 }

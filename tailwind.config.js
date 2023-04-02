@@ -17,8 +17,8 @@ module.exports = {
         text: "hsla(0,0%,100%,0.88)",
       },
       fontFamily: {
-        montserrat : ["Montserrat", "sans-serif"],
-        merriweather : ["Merriweather", "serif"],
+        montserrat: ["Montserrat", "sans-serif"],
+        merriweather: ["Merriweather", "serif"],
       },
     },
   },

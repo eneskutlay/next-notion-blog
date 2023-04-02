@@ -9,7 +9,7 @@ function Article(props) {
             {props.title}
           </Link>
         </h3>
-        <small className=" text-s text-text">{props.date}</small>
+        <small className=" text-s text-cyan-300">{props.date}</small>
       </header>
       <p className="mb-7 mt-2 font-montserrat text-lg text-text">
         {props.summary}
