@@ -1,6 +1,6 @@
 export const siteMetaData = {
   siteName: "John Doe's Blog",
-  siteUrl: "http://localhost:3000",
+  siteUrl: "https://nextjs-notionapi-blog.vercel.app",
   authorName: "John Doe",
   twitterUserName: "enesevski",
   githubUserName: "eneskutlay",
@@ -9,8 +9,8 @@ export const siteMetaData = {
 export const rssData = {
   rssTitle: "John Doe's Blog",
   rssDescription: "John Doe's Blog",
-  rssFeedUrl: "http://localhost:3000/rss",
-  rssSiteUrl: "http://localhost:3000",
+  rssFeedUrl: `${siteMetaData.siteUrl}/rss`,
+  rssSiteUrl: `${siteMetaData.siteUrl}`,
   rssLanguage: "en",
   rssAuthorName: "John Doe",
   rssCategories: ["Tech", "Programming", "Web Development"],
