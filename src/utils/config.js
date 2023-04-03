@@ -7,11 +7,11 @@ export const siteMetaData = {
 };
 
 export const rssData = {
-  rssTitle: "John Doe's Blog",
+  rssTitle: `${siteMetaData.siteName}`,
   rssDescription: "John Doe's Blog",
   rssFeedUrl: `${siteMetaData.siteUrl}/rss`,
   rssSiteUrl: `${siteMetaData.siteUrl}`,
   rssLanguage: "en",
-  rssAuthorName: "John Doe",
+  rssAuthorName: `${siteMetaData.authorName}`,
   rssCategories: ["Tech", "Programming", "Web Development"],
 };

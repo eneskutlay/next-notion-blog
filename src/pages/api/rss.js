@@ -4,7 +4,7 @@ import { rssData } from "../../utils/config";
 
 const notion = new Client({ auth: process.env.NOTION_TOKEN });
 
-export default async (req, res) => {
+export const generateRssFeed = async (req, res) => {
   const databaseId = process.env.NOTION_DATABASE_ID;
   const response = await notion.databases.query({
     database_id: databaseId,
@@ -31,7 +31,7 @@ export default async (req, res) => {
       title: page.properties.Name.title[0].plain_text,
       description: page.properties.Summary.rich_text[0].text.content,
       date: date,
-      url: "http://localhost:3000/" + page.id,
+      url: `${rssData.site_url}/` + page.id,
     });
   });
 
