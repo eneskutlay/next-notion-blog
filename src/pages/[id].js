@@ -1,8 +1,10 @@
+/* eslint-disable @next/next/no-img-element */
 import { Fragment } from "react";
 import { databaseId } from ".";
 import { getDatabase, getPage, getBlocks } from "./api/notion";
 import Link from "next/link";
 import { Text } from "../components/Text";
+import Seo from "../components/Seo";
 
 const renderNestedList = (block) => {
   // Numbered lists not working\
@@ -144,20 +146,31 @@ export default function Post({ page, blocks }) {
   if (!page || !blocks) {
     return <div />;
   }
+  let title = page.properties.Name.title[0].plain_text;
+  let description = page.properties.Summary.rich_text[0].plain_text;
   return (
-    <div className="mx-auto my-5 max-w-3xl content-center px-3">
-      <article className="container">
-        <h1 className="edit">
-          <Text text={page.properties.Name.title} />
-        </h1>
-        <section className="font-merriweather text-base font-normal">
-          {blocks.map((block) => (
-            <Fragment key={block.id}>{renderBlock(block)}</Fragment>
-          ))}
-        </section>
-        <Link href="/">← Back to home</Link>
-      </article>
-    </div>
+    <>
+      <Seo
+        title={title}
+        ogImageUrl={`https://enes-og-image.vercel.app/api/og?title=${encodeURIComponent(
+          title
+        )}`}
+        description={description}
+      />
+      <div className="mx-auto my-5 max-w-3xl content-center px-3">
+        <article className="container">
+          <h1 className="edit">
+            <Text text={page.properties.Name.title} />
+          </h1>
+          <section className="font-merriweather text-base font-normal">
+            {blocks.map((block) => (
+              <Fragment key={block.id}>{renderBlock(block)}</Fragment>
+            ))}
+          </section>
+          <Link href="/">← Back to home</Link>
+        </article>
+      </div>
+    </>
   );
 }
 
