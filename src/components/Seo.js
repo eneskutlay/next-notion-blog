@@ -15,6 +15,7 @@ export default function Seo({ title, description, ogImageUrl }) {
       <link rel="shortcut icon" href="/favicon-32x32.png" />
       <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
       <link rel="icon" href="/favicon.ico" />
+      <meta name="description" content={description} />
       <meta name="author" content={siteMetaData.authorName} />
       <meta property="og:image" content={ogImageUrl} />
       <meta name="twitter:title" content={title} />
