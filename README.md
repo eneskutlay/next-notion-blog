@@ -1,21 +1,20 @@
 # Next Notion Blog
 
-A minimalist-focused blog website built on the capabilities of NextJS, Notion API and Tailwind providing quick setup and easy configuration.
+The purpose of this project is to enable easy sharing of your Notion notes on your blog site without requiring complex configurations or installations.
 
-[Demo Website](https://nextjs-notionapi-blog.vercel.app)
+### *✨ This project offers the following features:*
 
-## ✨ Features
-
-- Notion integration
-- Minimalist style
-- Accessibility, Performance and SEO [^1]
-- Easy Configuration
-- Supports all text-types.
+- Easy sharing of Notion notes on your blog site
+- Completely dynamic SEO
+- Dynamic OG images
+- PWA support
 - RSS Feed for blog posts
+
+With these features, this project aims to reach a wider audience and provide a faster user experience for your notes.
 
 ## 🚀 Getting Started
 
-**Clone project and install dependencies**
+**Clone the project and install dependencies**
 
 Use `git` to clone the site:
 
@@ -23,8 +22,7 @@ Use `git` to clone the site:
 git clone https://github.com/eneskutlay/next-notion-blog.git
 cd next-notion-blog
 ```
-
-and run `npm install`.
+Then, run `npm install`.
 
 ## 🛠️ Notion Integration
 
@@ -62,16 +60,21 @@ NOTION_DATABASE_ID=
 ![gif](https://files.readme.io/3e5cb5b-share-database-with-integration.gif)
 
 ## Change personal information
-
-Visit `src/utils/config.js` file to edit your personal information.
+Visit the `src/utils/config.js` file to edit your personal information and `public` folder for your images.
 
 ## 🏃 Run
 
 Start the site by running `npm run dev`.
 Your site is now running at `http://localhost:3000`!
 
-## 🤔 Questions or problems?
 
+## 🤔 Questions or problems?
 Easy, create an issue
 
-[^1]: Based on the Chrome Lighthouse report.
+## License
+
+This project is licensed under the [MIT License](https://github.com/eneskutlay/next-notion-blog/blob/master/License).
+
+---
+
+By [Enes Kutlay](https://github.com/eneskutlay)
