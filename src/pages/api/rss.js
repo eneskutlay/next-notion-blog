@@ -31,7 +31,7 @@ export const generateRssFeed = async (req, res) => {
       title: page.properties.Name.title[0].plain_text,
       description: page.properties.Summary.rich_text[0].text.content,
       date: date,
-      url: `${rssData.site_url}/` + page.id,
+      url: `${rssData.rssSiteUrl}/` + page.id,
     });
   });
 
@@ -39,3 +39,5 @@ export const generateRssFeed = async (req, res) => {
   res.write(feed.xml());
   res.end();
 };
+
+export default generateRssFeed;
