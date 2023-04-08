@@ -1,10 +1,10 @@
 import React from "react";
 import Head from "next/head";
-import { siteMetaData } from "@/utils/config";
+import { siteMetaData } from "../utils/config";
 export default function Seo({ title, description, ogImageUrl }) {
   ogImageUrl =
     ogImageUrl ||
-    `https://enes-og-image.vercel.app/api/og?title=${encodeURIComponent(
+    `${siteMetaData.siteUrl}/api/og?title=${encodeURIComponent(
       siteMetaData.siteName
     )}`;
   title = title || siteMetaData.siteName;

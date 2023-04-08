@@ -1,4 +1,4 @@
-import { siteMetaData } from "@/utils/config";
+import { siteMetaData } from "../utils/config";
 import Image from "next/image";
 
 function Bio() {

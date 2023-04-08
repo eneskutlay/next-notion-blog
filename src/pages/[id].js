@@ -5,6 +5,7 @@ import { getDatabase, getPage, getBlocks } from "./api/notion";
 import Link from "next/link";
 import { Text } from "../components/Text";
 import Seo from "../components/Seo";
+import { siteMetaData } from "../utils/config";
 
 const renderNestedList = (block) => {
   // Numbered lists not working\
@@ -152,7 +153,7 @@ export default function Post({ page, blocks }) {
     <>
       <Seo
         title={title}
-        ogImageUrl={`https://enes-og-image.vercel.app/api/og?title=${encodeURIComponent(
+        ogImageUrl={`${siteMetaData.siteUrl}/api/og?title=${encodeURIComponent(
           title
         )}`}
         description={description}
