@@ -9,21 +9,21 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@notionhq/client": "^2.2.3",
-    "@vercel/analytics": "^0.1.11",
-    "@vercel/og": "^0.5.1",
-    "eslint": "8.37.0",
-    "eslint-config-next": "13.2.4",
-    "next": "13.2.4",
+    "@notionhq/client": "^2.2.13",
+    "@vercel/analytics": "^1.0.2",
+    "@vercel/og": "^0.5.17",
+    "eslint": "8.50.0",
+    "eslint-config-next": "13.5.3",
+    "next": "13.5.3",
     "next-pwa": "^5.6.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "rss": "^1.2.2"
   },
   "devDependencies": {
-    "@types/react": "18.0.33",
-    "prettier": "^2.8.7",
-    "prettier-plugin-tailwindcss": "^0.2.6",
-    "tailwindcss": "^3.3.0"
+    "@types/react": "18.2.22",
+    "prettier": "^3.0.3",
+    "prettier-plugin-tailwindcss": "^0.5.4",
+    "tailwindcss": "^3.3.3"
   }
 }
