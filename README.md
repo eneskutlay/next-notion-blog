@@ -43,7 +43,7 @@ Then, run `npm install`.
 - Start from a new or existing page in your workspace.
 - Insert a new database by typing `/database` and selecting `Database - Full page`
 - Give it a title. I called mine "Destinations". Click the `•••` menu at the top right of the page, scroll to `Add connections`, and use the search bar to find the integration that you created. Click on your integration to give it access to your database.
-- Before moving on, you need the ID of the database you just created.  
+- Before moving on, you need the ID of the database you just created.
   Copy the URL of your Notion database. Make sure you're viewing the database as a full page - If you're using the Notion desktop app, click on the `Share` button and select `Copy link`.
 
 `https://www.notion.so/myworkspace/1ffe4fd3f5594744b0b9602d9afc4e70?v=...`
@@ -68,6 +68,8 @@ Start the site by running `npm run dev`.
 Your site is now running at `http://localhost:3000`!
 
 
+## GTmetrix Score
+![image](https://raw.githubusercontent.com/eneskutlay/next-notion-blog/master/public/GTmetrix.png)
 ## 🤔 Questions or problems?
 Easy, create an issue
 
